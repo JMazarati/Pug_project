@@ -1,0 +1,55 @@
+.wrapper
+    .logo
+        p SH
+    -var authorised;        
+    case authorised
+        when false    
+            ul.nav
+                li 
+                    a(href="#") Woman
+                li 
+                    a(href="#") Men
+                li 
+                    a(href="#") Kids
+                li 
+                    a(href="#") Comming Soon
+                li 
+                    a(href="#") About
+        when true    
+            ul.nav.nav-true
+                li 
+                    a(href="#") Woman
+                li 
+                    a(href="#") Men
+                li 
+                    a(href="#") Kids
+                li 
+                    a(href="#") Comming Soon
+                li 
+                    a(href="#") About
+    
+    .login
+        case authorised
+            when true
+                p.login_form Hi, Michal (
+                    a.logout(href="index.html") logout
+                    |)
+            when false
+                p.login_form 
+                    a.signin(href="category.html") Log In
+    .basket
+        case authorised
+            when true
+                p.basket_count Basket (4)
+            when false
+                p.basket_count Basket (0)
+                    
+    .search
+        case authorised
+            when true
+                input(placeholder="Search something..." id="search_smth")
+                label(for="search_smth") ⌕
+            when false
+                .search_icon.white 
+                    img(src="images/search.png") 
+    p.line

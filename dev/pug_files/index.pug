@@ -1,0 +1,65 @@
+doctype html
+html(lang="en")
+	head
+	include ./includes/head.pug
+	title doc
+	body
+	.main_wrap
+		.wrap
+			-authorised=false;
+			include ./includes/header.pug
+			.info  
+				h1.hazy-shade Hazy Shade of spring
+				p.italic-text.hazy-text  Quisque lorem tortor fringilla sed, vestibulum id, eleifend justo.
+				a(href="#", title="Check new arrivals").check new arrivals
+			.tile
+				.col-1
+					.new-arrival
+						p.big HEATHER GREY BASICS 
+						p.lessbig New Arrival
+					.cube
+				.col-2
+					.tweet
+						img(src="images/tweet.png")
+						p.twee Opening Ceremony @IndonesiaFW tomorrow, PMers! Are you ready for the biggest fashion movement in Indonesia? #infoPM pic.twitter.com/3VQvwt4diJ
+						p.nick @PuspitaMarthaID 
+					.goods
+						p.big chuck taylors
+						p $125.00
+					.collection
+						span ⟵
+						p.big Jaxon Hat
+						p.lessbig Beanie Hat
+				.col-3
+					.cube
+					.tweet
+						img(src="images/tweet.png")
+						p.twee Girls, Girls, Girls: A Look Back at 50 Years of the Pirelli Calendar
+						p.nick @Vogue
+					.goods
+						p.big basic blazer
+						span.lessbig from 
+							|$199.00
+				.col-4
+					.collection
+						span ⟵
+						p.big elegant shoes
+						p.lessbig BRAIDED LEATHER
+					.new-arrival
+						p.big jeans for ADVENTURE
+						p.lessbig New Arrival
+
+
+
+			.subscription
+				p.sign-up sign up to receive our updates
+				p.italic-text Nulla ipsum dolor lacus, suscipit adipiscing. Cum sociis natoque penatibus et ultrices volutpat.
+				.your-email
+					label(for="email") add
+						input(placeholder="Your e-mail" id="email")
+					
+			
+			include ./includes/slider.pug
+			include ./includes/footer.pug
+
+		
